@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./jukebox-backend/recom_model
+      dockerfile: Dockerfile  # Flask Dockerfile inside recom_model
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./jukebox-backend/recom_model:/app  
+    restart: unless-stopped
+
+  node-server:
+    build:
+      context: ./jukebox-backend
+      dockerfile: Dockerfile  # Node Dockerfile at jukebox-backend root
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./jukebox-backend:/app
+    restart: unless-stopped
+    depends_on:
+      - backend

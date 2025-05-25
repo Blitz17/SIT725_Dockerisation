@@ -53,6 +53,13 @@ mongoose.connection.on('error', (err) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/songs', songRoutes); 
 
+app.get('/api/student', (req, res) => {
+  res.json({
+    fullName: "Dhanush Soma",
+    studentId: "224967723"
+  });
+});
+
 // WebSocket logic (keep chat logic in a separate file)
 require('./socket/chat')(io);
 

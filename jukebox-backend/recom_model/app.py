@@ -5,8 +5,8 @@ from recom_by_playlist import PlaylistRecommender  # Different logic, same datas
 app = Flask(__name__)
 
 # Initialize recommenders with SAME dataset
-song_recommender = MusicRecommender('jukebox-backend/recom_model/filtered_data.csv')
-playlist_recommender = PlaylistRecommender('jukebox-backend/recom_model/filtered_data.csv')
+song_recommender = MusicRecommender('filtered_data.csv')
+playlist_recommender = PlaylistRecommender('filtered_data.csv')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
