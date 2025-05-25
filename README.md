@@ -2,7 +2,7 @@
 
 JukeBox is a full-stack music recommendation application that uses a Flask backend for AI-based song suggestions and a Node.js server to serve frontend APIs. This project is fully containerized using Docker Compose.
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 jukebox/
@@ -16,7 +16,7 @@ jukebox/
 └── README.md
 ```
 
-## 🚀 How to Run the Containers
+## How to Run the Containers
 
 ### 1. Build the Images
 From the project root, run:
@@ -34,14 +34,14 @@ To run in background (detached mode):
 docker compose up -d
 ```
 
-## 🌐 Access the App
+## Access the App
 
 | Service         | URL                     |
 |----------------|--------------------------|
 | Node.js Server | http://localhost:3000    |
 | Flask Backend  | http://localhost:5000    |
 
-## ✅ Test the Student API Endpoint
+## Test the Student API Endpoint
 
 Visit this URL in your browser or Postman:
 ```
@@ -56,7 +56,7 @@ Expected JSON output:
 }
 ```
 
-## 🐳 Docker Compose Overview
+## Docker Compose Overview
 
 This app uses Docker Compose to run two containers:
 - `backend` (Flask server) on port `5000`
@@ -64,7 +64,7 @@ This app uses Docker Compose to run two containers:
 
 Inter-service communication is handled via Docker's internal networking. The `node-server` can call the Flask backend using the service name `backend`.
 
-## 📘 Author
+## Author
 
 **Dhanush Soma**  
 Master’s of IT (Professional) – Deakin University
