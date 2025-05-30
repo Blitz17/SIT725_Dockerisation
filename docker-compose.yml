@@ -16,8 +16,6 @@ services:
       dockerfile: Dockerfile  # Node Dockerfile at jukebox-backend root
     ports:
       - "3000:3000"
-    volumes:
-      - ./jukebox-backend:/app
     restart: unless-stopped
     depends_on:
       - backend
