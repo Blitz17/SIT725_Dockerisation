@@ -1,18 +1,20 @@
-# Use Node.js base image
+# Use official Node.js image
 FROM node:18-alpine
 
-# Set working directory inside container
+# Set the working directory
 WORKDIR /app
 
-# Install Node dependencies
+# Copy package.json and package-lock.json
 COPY package*.json ./
+
+# Install all dependencies, including dotenv
 RUN npm install
 
-# Copy React app source
+# Copy the entire backend code into the container
 COPY . .
 
-# Expose React port
+# Expose the backend port (adjust if needed)
 EXPOSE 3000
 
-# Run the app
-CMD ["npm", "start"]
+# Run the backend
+CMD ["node", "server.js"]
