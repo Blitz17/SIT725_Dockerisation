@@ -12,8 +12,8 @@ services:
 
   node-server:
     build:
-      context: ./jukebox-backend
-      dockerfile: Dockerfile  # Node Dockerfile at jukebox-backend root
+      context: .
+      dockerfile: jukebox-backend/Dockerfile
     ports:
       - "3000:3000"
     restart: unless-stopped

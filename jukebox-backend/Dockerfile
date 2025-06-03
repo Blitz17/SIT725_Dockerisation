@@ -3,7 +3,8 @@ FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
-
+COPY jukebox-backend/ ./  
+COPY jukebox-frontend/views ./views 
 # Copy package.json and package-lock.json
 COPY package*.json ./
 

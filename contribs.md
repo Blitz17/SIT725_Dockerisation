@@ -24,7 +24,7 @@
 - Creating and maintaining trello tasks.
 
 ## Dhanush Soma
-## Hi
+
 - I have contributed to the Software Requirements Specification (SRS) by writing the Introduction of the document, UML designs and small contributions to the Non-Functional Requirements, as well as the editing of the document.
 - I have developed the git structure for the codebase for the project, added collaborators with adequate access rights, created the branching logic and added restrictions on the main branch to prevent unwanted changes.
 - I have updated my Trello board with my upcoming and current tasks which amount to around 65 hours of contribution.
