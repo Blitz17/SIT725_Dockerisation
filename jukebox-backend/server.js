@@ -38,6 +38,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(express.static(path.join(__dirname, 'jukebox-frontend/public')));
 
 // MongoDB
 mongoose.connect(process.env.MONGO_URL, {
